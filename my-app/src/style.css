@@ -1,0 +1,849 @@
+:root {
+  --riot-red: rgb(209, 54, 58);
+  --riot-extra-red: rgb(227, 0, 32);
+  --riot-white: rgb(249, 249, 249);
+  --riot-almost-white: rgb(240, 240, 240);
+
+  --riot-black10: rgb(10, 10, 10);
+  --riot-black14: rgb(14, 14, 14);
+  --riot-black17: rgb(17, 17, 17);
+  --riot-almost-black: rgb(28, 27, 26);
+
+  --riot-gray: rgb(138, 136, 135);
+  --riot-background: rgb(31, 31, 31);
+
+  --riot-narrow-radius: 25.6px;
+  --riot-gradient: linear-gradient(to right, rgba(14, 14, 14, 0.68), rgba(10, 10, 10, 0));
+
+  --primary-font: 'Mark Pro', serif;
+  --secondary-font: 'Eco Coding', serif;
+  --primary-font-size: 20px;
+  --primary-font-weight: 400;
+  --secondary-font-weight: 400;
+  --primary-line-height: 1.5;
+}
+
+body {
+  /*padding-top: 60px;*/
+  font-size: 20px !important;
+  /*TODO Check if accurate (newly added)*/
+  background-color: var(--riot-background);
+}
+
+::selection {
+  background-color: var(--riot-red);
+  color: var(--riot-white);
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url("fonts/MarkPro/mark-pro--heavy.woff2");
+  font-weight: 850;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url("fonts/MarkPro/mark-pro--bold.woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url("fonts/MarkPro/mark-pro--medium.woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Mark Pro';
+  src: url("fonts/MarkPro/mark-pro--regular.woff2");
+  font-weight: normal;
+}
+
+/*Eco Coding W02 WGL4*/
+@font-face {
+  font-family: 'Eco Coding';
+  src: url("fonts/EcoCoding/EcoCodingWGL4.woff");
+  font-weight: 400;
+}
+
+/*FF MARK W05*/
+@font-face {
+  font-family: 'FF Mark';
+  src: url("fonts/FFMark/ffmark.woff2");
+  font-weight: 600;
+}
+
+.body_style {
+  background-color: var(--riot-background);
+  font-family: 'Mark Pro', serif;
+  font-weight: normal;
+  color: var(--riot-almost-white);
+}
+
+.navBtn {
+  border-width: 0 !important;
+  background-color: transparent !important;
+  color: var(--riot-white);
+}
+
+.navBtn:hover {
+  background-color: rgba(128, 128, 128, 0.3) !important;
+}
+
+.btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+#logo {
+  fill: var(--riot-white);
+}
+
+#logo:hover {
+  fill: var(--riot-extra-red)
+}
+
+#logo:active {
+  fill: var(--riot-red);
+}
+
+#signIn {
+  background-color: var(--riot-red) !important;
+  border-radius: 25.6px;
+  color: var(--riot-black17);
+  font-weight: 600;
+}
+
+.input-group-text {
+  background-color: transparent !important;
+  color: var(--riot-white);
+}
+
+#searchField {
+  border-top-left-radius: var(--riot-narrow-radius);
+  border-bottom-left-radius: var(--riot-narrow-radius);
+  border-width: 1.5px;
+  border-right-width: 0;
+  background-color: transparent;
+  color: var(--riot-almost-white);
+}
+
+input .searchField {
+  text-align: center;
+}
+
+input::placeholder {
+  color: var(--riot-white) !important;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+#input-group:focus {
+  /*trying to remove outline TODO*/
+  outline: none !important;
+  outline-color: yellow !important;
+  box-shadow: none;
+}
+
+
+#searchIcon {
+  border-top-right-radius: var(--riot-narrow-radius);
+  border-bottom-right-radius: var(--riot-narrow-radius);
+  color: var(--riot-white);
+  border-width: 1.5px;
+  border-left-width: 0;
+}
+
+#rightNavTop {
+  & i {
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+.dropHeading {
+  font-weight: 600 !important;
+  color: rgb(10, 10, 10) !important;
+  background-color: rgba(186, 186, 186, 0.1) !important;
+}
+
+.dropItem {
+  font-weight: 400 !important;
+  color: rgb(74, 74, 74) !important;
+}
+
+.riotDrop {
+  border-width: 0 !important;
+  border-top: var(--riot-red) solid 5px !important;
+}
+
+/*hover open*/
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border-radius: 1.5px !important;
+
+}
+
+#newsUnderlined::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 78px;
+  height: 5px;
+  background-color: var(--riot-red);
+  border-radius: 1.5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#newsUnderlined:hover::after {
+  opacity: 1;
+}
+
+.dropdown-toggle::after {
+  color: grey;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/*Transparent NavBar Currently OFF TODO*/
+.navbar {
+  /*background-color: transparent;*/
+  background-color: var(--riot-black17);
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'FF Mark', serif;
+  letter-spacing: 0.9px;
+}
+
+.navbar.scrolled {
+  background-color: var(--riot-black17);
+  border-bottom-color: rgba(51, 51, 51, 0.25) !important;
+
+  #searchField {
+    background-color: rgb(43, 42, 41);
+    border-width: 0;
+  }
+
+  #searchIcon {
+    background-color: rgb(43, 42, 41) !important;
+    border-color: rgb(43, 42, 41);
+  }
+
+  & input::placeholder {
+    color: var(--riot-gray) !important;
+  }
+
+  #signIn {
+    color: var(--riot-black10);
+  }
+}
+
+#topNav {
+  color: var(--riot-white);
+  height: 80px;
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-color: transparent;
+}
+
+#topNav * {
+  color: var(--riot-white);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.liTopNav a {
+  margin-right: 0 !important;
+}
+
+
+.dropdown-toggle::after {
+  /*color: transparent;*/
+  content: url(svg/caret-down-fill.svg);
+
+
+}
+
+/*Section #1*/
+.song-of-nunu {
+  background-image: var(--riot-gradient), url('images/son-riot-website.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 885px;
+  width: auto;
+}
+
+#nunuImg {
+  width: 360px;
+  padding-top: 65px;
+}
+
+#nunuInfo {
+  width: 600px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 175px;
+  text-align: center;
+
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+
+}
+
+#nunuInfoH2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+#nunuInfoP {
+  color: rgba(231, 230, 227, 0.6);
+  width: 600px;
+}
+
+#preOrderBtn {
+  background-image: linear-gradient(to right, rgba(8, 96, 140, .7), rgba(11, 196, 226, .2));
+  background-color: rgb(11, 196, 226);
+  font-size: 31px;
+  font-weight: 700;
+  border-radius: 24px;
+  width: 333px;
+  height: 72px;
+  margin-top: 30px;
+  color: var(--riot-white);
+  text-align: center;
+  letter-spacing: 0.75px;
+  border-width: 0;
+  padding-left: 0;
+}
+
+/*gradient blue*/
+#preOrderBtn:hover {
+  box-shadow: 5px 10px 15px rgba(11, 196, 226, 0.5);
+  border-width: 0;
+  background-color: rgb(12, 212, 245);
+}
+
+#preOrderBtnArrowColor {
+  font-size: 45px;
+  color: var(--riot-white);
+}
+
+#preOrderBtnArrowContainer {
+  position: relative;
+  margin-right: 10px;
+}
+
+#preOrderBtnArrowCircle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(10, 10, 10);
+  margin-right: 10px;
+  font-size: 45px;
+}
+
+
+.games, .esports, .entertainment, .forge {
+  background: var(--riot-background);
+  /*height: 2000px;*/
+  width: 100%;
+}
+
+.news {
+  width: 100%;
+}
+
+/*flips the gradient*/
+.news::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--riot-black10) radial-gradient(55% 180% at 5% 100%, rgba(11, 196, 226, 0.2) 0, rgba(10, 10, 10, 0) 75%, rgba(10, 10, 10, 0) 100%);
+  transform: scaleY(-1);
+  z-index: -1;
+}
+
+.hiring {
+  background-color: var(--riot-almost-white);
+  background-position: 100% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 566px;
+  background-image: url("images/annie.jpg");
+  position: relative;
+  z-index: 1;
+  color: var(--riot-black10);
+}
+
+.hiring::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform: skewX(-7.5deg);
+  transform-origin: 100% 0;
+  background-color: var(--riot-almost-white);
+  z-index: -1;
+}
+
+#newsCinematic {
+  background-image: linear-gradient(to top, rgba(14, 14, 14, 0.25), rgba(10, 10, 10, 0)), url("images/lol-w23-thumbnail-cinematictrailer-v2.jpg");
+  width: 98%;
+}
+
+
+.title {
+  color: rgb(249, 249, 249);
+  font-size: 48px;
+  font-weight: 600;
+  padding-left: 50px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1800/818;
+  border-width: 0 !important;
+  border-color: transparent;
+  text-align: center;
+  box-shadow: 0 0 1px 10px rgba(15, 15, 15, 0.05);
+  position: relative;
+}
+
+.card:hover {
+  outline: 2px solid var(--riot-gray) !important;
+  outline-offset: 3px;
+}
+
+.newsCard {
+  aspect-ratio: 650/120;
+  background-position: 100% 0;
+  background-size: contain;
+  /*max-height: 120px;*/
+  text-align: start !important;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent !important;
+}
+
+
+.newsCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 100%;
+  transform: skewX(-10deg);
+  transform-origin: 100% 0;
+  background-color: rgba(128, 128, 128, 0.2) !important;
+}
+
+.newsCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72%;
+  height: 100%;
+  background-color: var(--riot-black10);
+  transform: skewX(-10deg);
+  transform-origin: 100% 0;
+  z-index: -1;
+}
+
+.newsTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.5px;
+  color: var(--riot-white);
+}
+
+.newsTitleLg {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--riot-white);
+
+}
+
+.newsLabel {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 22.5px;
+  color: rgba(101, 100, 98, 0.9);
+}
+
+.newsCardLg {
+  aspect-ratio: 1048/524;
+  text-align: start !important;
+  background-position: top;
+  background-size: cover;
+}
+
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#newsCEO {
+  background-image: url("images/rg-nicoloannouncement-2023q4.png");
+}
+
+#newsWorlds {
+  background-image: url("images/w23-primer-header-img-v1-0.jpg");
+}
+
+#newsVegas {
+  background-image: url("images/tvo-reg-announcement-article-01.jpg");
+}
+
+#newsBriar {
+  background-image: url("images/header-image.png");
+}
+
+#seeMoreBtn {
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 6.5px;
+  color: var(--riot-white);
+  border-width: 0;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+#seeMoreBtn:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+
+
+.cardLogo {
+  position: absolute;
+  width: 23%;
+  left: 8%;
+  transform: translateY(-70%);
+}
+
+.osInfo {
+  position: absolute;
+  top: 85%;
+  left: -32%;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  color: var(--riot-white);
+
+  & i {
+    padding: 1.5px;
+  }
+}
+
+.osInfoBox {
+  background-color: rgba(138, 136, 135, 0.2);
+  border-radius: 15px;
+}
+
+.osInfoSmall {
+
+  position: absolute;
+  top: 80%;
+  left: -31%;
+  width: 100%;
+  height: 100%;
+  font-size: 8px;
+  color: var(--riot-white);
+
+  .osInfoBox {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  & i {
+    padding: 1px;
+  }
+}
+
+#cardValorant {
+  background-image: url("images/val7-act-1.png");
+}
+
+#cardLOL {
+  background-image: url("images/lolkv-2023.png");
+}
+
+#cardTFT {
+  background-image: url("images/riotgames-com-tft-set9.png");
+}
+
+#cardLOLWR {
+  background-image: url("images/wrka-2023.png");
+}
+
+#cardLOR {
+  background-image: url("images/riotgames-com-legendsofruneterra-2023.png");
+}
+
+/*Esports*/
+
+#cardLOLEsport {
+  background-image: url("images/lol-esports-kv-2023.png");
+}
+
+#cardVCT {
+  background-image: url("images/val.png");
+}
+
+/*Entertainment*/
+
+#cardArcane {
+  background-image: url("images/arcane-card.png");
+}
+
+#cardMusic {
+  background-image: url("images/riot-music-card.png");
+}
+
+/*Forge*/
+
+#cardMageSeeker {
+  background-image: url("images/mageseeker-card.jpg");
+}
+
+#cardRuinedKing {
+  background-image: url("images/ruined-king-productimage.png");
+}
+
+#cardHextech {
+  background-image: url("images/hextetch-mayhem-card-bg-1800.jpg");
+}
+
+#cardConvrgence {
+  background-image: url("images/convrgence-productimage.png");
+}
+
+#cardNunu {
+  background-image: url("images/song-of-nunu-card-bg-1800.jpg");
+}
+
+
+.forge {
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 15000px;
+    margin-left: 0;
+  }
+  .card {
+    width: 32.3%;
+  }
+
+  .btn {
+    border-width: 0;
+  }
+  .btn:hover, .btn:active {
+    background-color: transparent !important;
+  }
+
+  .scrollArrow {
+    font-size: 25px;
+  }
+
+  .scrollCircle {
+    font-size: 6px;
+    padding: 5px;
+  }
+
+  #scroll-right-button {
+    color: var(--riot-white);
+  }
+
+  #scroll-left-button, #scroll-right-circle {
+    color: var(--riot-gray);
+  }
+  #scroll-left-circle {
+    color: var(--riot-red);
+  }
+
+}
+#scroll-left-button::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 50px;
+  width: 2px;
+  background-color: var(--riot-gray);
+}
+
+
+
+/*Last section*/
+.hiring {
+
+  & h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  & p {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--riot-gray);
+  }
+
+  .hireBtnPrimary {
+    background-color: rgba(173, 172, 170, 0.2);
+    border-width: 0;
+    border-radius: 10px;
+    max-width: 256px;
+    max-height: 142px;
+  }
+  .hireBtnPrimary:hover {
+    background-color: rgba(173, 172, 170, 0.5);
+  }
+
+  .hiringNumber {
+    color: var(--riot-black10);
+    font-size: 55px;
+    font-weight: 700;
+  }
+
+  .hiringDesc {
+    color: var(--riot-gray);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .exploreBtn {
+    color: var(--riot-white);
+    background-color: var(--riot-red);
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 256px;
+    height: 64px;
+    border-radius: 15px;
+  }
+
+  .exploreBtn:hover {
+    background-color: rgba(209, 54, 58, 0.8);
+  }
+
+  .exploreText {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+
+}
+
+
+footer {
+  background-color: rgb(37, 36, 35);
+  width: 100vw;
+}
+
+.footer * {
+  /*padding-top: 20px;*/
+  padding-bottom: 50px;
+}
+
+footer .navbar {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+#surfaceBtn {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: "Eco Coding", serif;
+  border-width: 0;
+  float: right;
+}
+
+#surfaceBtn:hover {
+  background-color: transparent !important;
+  text-decoration: none;
+}
+
+#surfaceBtn:hover {
+
+  #surfaceBtnText {
+    color: white !important;
+  }
+
+  #surfaceBtnCaret {
+    color: var(--riot-red) !important;
+  }
+}
+
+.riotButton {
+  border-width: 0 !important;
+  fill: rgb(138, 136, 135);
+}
+
+.riotButton:hover {
+  color: var(--riot-red) !important;
+  border-width: 0 !important;
+  background-color: transparent !important;
+}
+
+#firstBumpFooter:hover #firstBumpFooterSVG {
+  fill: var(--riot-red) !important;
+}
+
+footer a {
+  font-size: 11px;
+  text-decoration: none;
+  color: var(--riot-gray);
+  font-weight: 800 !important;
+  letter-spacing: 0.88px;
+}
+
+footer li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer a:hover {
+  color: var(--riot-almost-white);
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--riot-gray);
+}
+
+#copyright {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--riot-gray);
+}
