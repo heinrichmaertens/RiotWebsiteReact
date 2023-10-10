@@ -1,24 +1,6 @@
-$(document).ready(function() {
-  $('.dropdown').hover(function() {
-    $(this).addClass('show');
-    $(this).find('.dropdown-menu').addClass('show');
-  }, function() {
-    $(this).removeClass('show');
-    $(this).find('.dropdown-menu').removeClass('show');
-  });
-});
-
-/**
- * Listen to scroll to change header opacity class
- */
-window.addEventListener('scroll', function() {
-  const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 0) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
-});
+import React, { useEffect, useState } from 'react';
+import './index.js';
+import { Navbar } from 'react-bootstrap';
 
 //Scrolling Cards
 // currently lots of duplicate code, will fix later

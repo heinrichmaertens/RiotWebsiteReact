@@ -26,8 +26,10 @@
 body {
   /*padding-top: 60px;*/
   font-size: 20px !important;
-  /*TODO Check if accurate (newly added)*/
   background-color: var(--riot-background);
+  font-family: 'Mark Pro', serif;
+  font-weight: normal;
+  color: var(--riot-almost-white);
 }
 
 ::selection {
@@ -71,13 +73,6 @@ body {
   font-family: 'FF Mark';
   src: url("fonts/FFMark/ffmark.woff2");
   font-weight: 600;
-}
-
-.body_style {
-  background-color: var(--riot-background);
-  font-family: 'Mark Pro', serif;
-  font-weight: normal;
-  color: var(--riot-almost-white);
 }
 
 .navBtn {
@@ -215,8 +210,8 @@ input::placeholder {
 
 /*Transparent NavBar Currently OFF TODO*/
 .navbar {
-  /*background-color: transparent;*/
-  background-color: var(--riot-black17);
+  background-color: transparent;
+  /*background-color: var(--riot-black17);*/
   transition: background-color 0.3s ease-in-out;
   font-family: 'FF Mark', serif;
   letter-spacing: 0.9px;
@@ -266,8 +261,8 @@ input::placeholder {
 
 .dropdown-toggle::after {
   /*color: transparent;*/
-  content: url(svg/caret-down-fill.svg);
-
+  /*content: url(svg/caret-down-fill.svg);*/
+  /*Removed custom caret TODO replace or remove code*/
 
 }
 
@@ -302,6 +297,7 @@ input::placeholder {
 #nunuInfoH2 {
   margin-top: 50px;
   margin-bottom: 15px;
+  color: var(--riot-white);
 }
 
 #nunuInfoP {
@@ -665,11 +661,13 @@ input::placeholder {
 
   .scrollArrow {
     font-size: 25px;
+    background-color: transparent;
   }
 
   .scrollCircle {
     font-size: 6px;
     padding: 5px;
+    background-color: transparent;
   }
 
   #scroll-right-button {
@@ -754,8 +752,6 @@ input::placeholder {
     font-size: 20px;
     font-weight: 700;
   }
-
-
 }
 
 
@@ -785,14 +781,12 @@ footer .navbar {
   font-family: "Eco Coding", serif;
   border-width: 0;
   float: right;
+  background-color: transparent;
 }
-
 #surfaceBtn:hover {
+
   background-color: transparent !important;
   text-decoration: none;
-}
-
-#surfaceBtn:hover {
 
   #surfaceBtnText {
     color: white !important;
@@ -806,6 +800,8 @@ footer .navbar {
 .riotButton {
   border-width: 0 !important;
   fill: rgb(138, 136, 135);
+  font-size: 18px !important;
+  /*padding: 0 !important;*/
 }
 
 .riotButton:hover {
@@ -818,7 +814,7 @@ footer .navbar {
   fill: var(--riot-red) !important;
 }
 
-footer a {
+footer .nav-link {
   font-size: 11px;
   text-decoration: none;
   color: var(--riot-gray);
@@ -826,20 +822,9 @@ footer a {
   letter-spacing: 0.88px;
 }
 
-footer li {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-footer a:hover {
+footer .nav-link:hover {
   color: var(--riot-almost-white);
   text-decoration: underline;
-}
-
-footer p {
-  font-size: 11px;
-  font-weight: 400;
-  color: var(--riot-gray);
 }
 
 #copyright {
